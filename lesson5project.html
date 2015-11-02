@@ -1,0 +1,31 @@
+<html>
+
+<head>
+<script type="text/javascript"> 
+<!-- 
+
+function seeIt(event){
+  var special=event.type 
+   alert(special)
+}
+//-->
+
+/*A function is a reusable code-block that will be executed by an event, or when the function is called.  In this case, the function seeIt will be executed when an event occurs.
+
+The above code sets the variable 'special' to the value of event.type and calls an alert box when an event type is invoked.
+A type is a string property that specifies the type of the event; its name is the event handler minus the "on" prefix.  So when the onload() event handler is invoked, the type property of the Event object is "load."  And when the onclick() event handler is invoked, the type property of the Event object is "click." 
+
+What the code above and below does is it makes the type property of the Event object appear visibly (thanks to the the seeIt(event)function).  In this case, when the body of the document is loaded, the type property of the Event object "onload" (i.e., the literal string "load")appears in an alert box.  When the "Click Me" button (formatted below with the input type statement) is clicked, the type property of the Event object "onclick" (i.e., the literal string "click") appears in an alert box.
+
+To answer the second question of this objective, event.type gives the name of the type of event invoked (in this case, "load" and "click").*/
+</script>
+</head>
+
+<body onload="seeIt(event)">
+
+<form>
+   <input type="button" value="Click Me" onclick="seeIt(event)">
+</form>
+
+</body>
+</html>
